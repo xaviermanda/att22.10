@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mimo | Gestão de clientes</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <main class="main-content">
+      <div class="cute-ribbon"><span>✿</span> seu cantinho organizado com amor <span>♡</span></div>
+      <header class="topbar"><div><span class="breadcrumb">Workspace <span>/</span> Clientes</span><h1>Seus clientes, com carinho<span>♡</span></h1></div><a class="top-api" href="/api" target="_blank">Ver documentação <b>↗</b></a></header>
+      <section class="welcome-card"><div class="welcome-copy"><span class="welcome-label"><span class="tiny-sparkle">✧</span> SEJA BEM-VINDA AO SEU PAINEL <span class="tiny-sparkle">✧</span></span><h2>Um cantinho para<br><em>organizar seus contatos.</em></h2><p>Cadastre, consulte e mantenha as informações dos seus clientes em um só lugar.</p><a class="welcome-cta" href="#cadastro">♡ Quero cadastrar alguém <span>↗</span></a></div><div class="welcome-art" aria-hidden="true"><div class="art-circle circle-one"></div><div class="art-circle circle-two"></div><div class="art-card"><span class="art-heart">♡</span><span class="art-lines"><i></i><i></i><i></i></span><span class="art-check">✓</span></div><span class="floating-heart heart-one">♡</span><span class="floating-heart heart-two">✦</span><span class="floating-heart heart-three">♡</span><span class="floating-heart heart-four">✧</span><span class="art-sticker">feito com<br>carinho <b>♡</b></span></div></section>
+      <section class="stats-row"><article class="stat-card"><span class="stat-icon icon-pink">♡</span><div><span class="stat-label">CLIENTES CADASTRADOS</span><strong id="countStat">0</strong><small>na sua lista</small></div></article><article class="stat-card"><span class="stat-icon icon-lilac">⌁</span><div><span class="stat-label">STATUS DA API</span><strong class="api-status">Conectada</strong><small><span class="online-dot"></span> pronta para receber dados</small></div></article><article class="stat-card"><span class="stat-icon icon-peach">{ }</span><div><span class="stat-label">INTEGRAÇÃO</span><strong>REST API</strong><small>Node.js + Express</small></div></article></section>
+      <section class="work-grid">
+        <article class="card form-card" id="cadastro"><div class="section-heading"><div><span class="section-overline">VAMOS COMEÇAR</span><h2 id="formTitle">Adicionar cliente</h2></div><span class="heading-icon">✿<i>✧</i></span></div><p class="card-description">Preencha os dados abaixo para incluir alguém na sua lista.</p><form id="clientForm"><label for="nome">Nome completo <span>*</span></label><div class="input-wrap"><span>♙</span><input id="nome" name="nome" placeholder="Ex.: Ana Costa" required maxlength="100"></div><label for="email">Endereço de e-mail <span>*</span></label><div class="input-wrap"><span>✉</span><input id="email" name="email" type="email" placeholder="ana@email.com" required maxlength="150"></div><button class="primary" id="submitBtn" type="submit"><span class="button-plus">＋</span> Cadastrar cliente <span class="button-arrow">→</span></button><button class="cancel hidden" id="cancelBtn" type="button">Cancelar edição</button></form><div class="privacy-note"><span>♡</span> O ID do cadastro é criado automaticamente.</div></article>
+        <article class="card clients-card" id="lista"><div class="clients-heading"><div><span class="section-overline">SUA AGENDA</span><h2>Lista de clientes <span class="count-pill" id="count">0</span></h2><p class="card-description">Veja e gerencie os dados cadastrados.</p></div><button class="refresh" id="refreshBtn" aria-label="Atualizar lista" title="Atualizar lista">↻</button></div><div class="list-tools"><label class="search-box" for="searchClients"><span>⌕</span><input id="searchClients" type="search" placeholder="Procurar por nome ou e-mail..."></label><button class="export-btn" id="exportBtn" type="button">♡ Exportar lista</button></div><div class="table-wrap"><table><thead><tr><th>CLIENTE</th><th>E-MAIL</th><th>ID</th><th></th></tr></thead><tbody id="clientRows"></tbody></table><div id="empty" class="empty"><span>♡</span><b>Sua lista está esperando</b><p>Cadastre um cliente para ele aparecer aqui.</p></div><div id="noResults" class="empty hidden"><span>⌕</span><b>Nenhum mimo encontrado</b><p>Tente buscar por outro nome ou e-mail.</p></div></div><div class="list-bottom"><span><i class="online-dot"></i> Sincronizado com a API</span><a href="/api/resposta" target="_blank">Explorar JSON <b>↗</b></a></div><p id="status" class="status" role="status"></p></article>
+      </section>
+      <footer><span class="footer-flower">✿</span><span>mimo<span class="brand-dot">.</span></span> Feito para manter tudo em ordem <span class="footer-heart">♡</span><div><a href="/api" target="_blank">Documentação</a><a href="/api/resposta" target="_blank">JSON</a><a href="/clientes" target="_blank">Endpoint /clientes</a></div></footer>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
